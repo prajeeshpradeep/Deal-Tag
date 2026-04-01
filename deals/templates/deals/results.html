@@ -1,0 +1,86 @@
+{% extends 'deals/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="results-layout container">
+    <aside class="filters-sidebar">
+        <h3>Filters</h3>
+        <div class="filter-group">
+            <label>Brand</label>
+            <input type="checkbox"> Apple<br>
+            <input type="checkbox"> Samsung<br>
+            <input type="checkbox"> Dell
+        </div>
+        <div class="filter-group">
+            <label>Platform</label>
+            <input type="checkbox"> Amazon<br>
+            <input type="checkbox"> BestBuy<br>
+            <input type="checkbox"> Walmart
+        </div>
+    </aside>
+
+    <div class="results-main">
+        <h2 class="results-title">
+            {% if query %}
+                Results for "{{ query }}"
+            {% else %}
+                All Deals
+            {% endif %}
+            <span class="results-count">({{ results|length }} products found)</span>
+        </h2>
+
+        {% if not results %}
+            <div class="no-results">
+                We couldn't find any products matching your search. Please try a different query.
+            </div>
+        {% else %}
+            <div class="products-list">
+                {% for item in results %}
+                <div class="product-card">
+                    <div class="product-info-panel">
+                        <img src="{{ item.deals.0.image }}" alt="{{ item.product.name }}" class="product-thumbnail">
+                        <div class="product-details">
+                            <h3 class="product-name">{{ item.product.name }}</h3>
+                            <span class="product-brand">{{ item.product.brand }} | {{ item.product.category }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="platforms-panel">
+                        {% for deal in item.deals %}
+                        <div class="deal-row {% if deal.is_lowest %}lowest-price-row{% endif %}">
+                            <div class="deal-platform">{{ deal.platform }}</div>
+                            <div class="deal-stock">
+                                {% if deal.in_stock %}
+                                    <span class="badge in-stock">In Stock</span>
+                                {% else %}
+                                    <span class="badge out-of-stock">Out of Stock</span>
+                                {% endif %}
+                            </div>
+                            <div class="deal-price-col">
+                                <div class="original-price-wrap">
+                                    <span class="original-price">${{ deal.original_price|floatformat:2 }}</span>
+                                    <span class="discount-percent">-{{ deal.discount_percentage }}%</span>
+                                </div>
+                                <span class="deal-price">${{ deal.price|floatformat:2 }}</span>
+                                <div class="badges-wrap">
+                                    {% if deal.is_lowest %}
+                                        <span class="badge best-deal-badge">Lowest Price</span>
+                                    {% endif %}
+                                    {% if deal.is_biggest_discount %}
+                                        <span class="badge biggest-discount-badge">Top Discount</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="deal-action">
+                                <a href="{{ deal.url }}" class="btn {% if deal.is_lowest %}btn-buy-best{% else %}btn-buy{% endif %}">View Deal</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

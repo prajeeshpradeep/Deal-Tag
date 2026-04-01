@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sreehari K U - Computer Science Engineer & Robotics Master’s Student.">
+    <title>Sreehari K U | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#hero" class="nav-brand">SKU</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero container">
+            <div class="hero-content">
+                <p class="greeting">Hi, my name is</p>
+                <h1 class="name">Sreehari K U.</h1>
+                <h2 class="title">Computer Science Engineer <span class="arrow">&rarr;</span> Robotics Master’s Student</h2>
+                <p class="intro">
+                    I build systems that focus on practical problem solving, especially where software interacts with real-world applications. Currently exploring robotics, distributed systems, and performance-oriented programming.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="about container section-padding">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <p>
+                    I completed my Bachelor’s degree in Computer Science and Engineering from Sree Buddha College of Engineering (2020–2024).
+                </p>
+                <p>
+                    Currently, I am pursuing my Master’s in Robotics at DIT Cham, Germany. My interests include simulation, backend systems, and efficient software design. I enjoy bridging the gap between hardware execution and software logic to build meaningful, real-world systems.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="skills container section-padding">
+            <div class="section-header">
+                <h2>Skills & Technologies</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>Django</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Web</h3>
+                    <ul class="skill-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Core</h3>
+                    <ul class="skill-list">
+                        <li>Data Structures</li>
+                        <li>System Design Basics</li>
+                        <li>Parallel & Distributed Computing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="projects container section-padding">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="line"></div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <p class="project-overline">Featured Project</p>
+                    <h3 class="project-title">Smart Deal Finder</h3>
+                    <div class="project-description">
+                        <p>
+                            A web application that allows users to search for products and compare prices across selected e-commerce platforms. The system highlights the best available deal based on price and basic offer comparison.
+                        </p>
+                        <ul class="project-features">
+                            <li>Product search functionality</li>
+                            <li>Aggregates results from multiple sources</li>
+                            <li>Displays price comparison in a clean layout</li>
+                            <li>Highlights the lowest price automatically</li>
+                            <li>Backend built using Django with separated service logic for data fetching</li>
+                        </ul>
+                    </div>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="contact container section-padding">
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p>
+                    I'm currently looking for new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!
+                </p>
+                <div class="contact-info">
+                    <a href="mailto:sreharisree06@gmail.com" class="email-link">sreharisree06@gmail.com</a>
+                </div>
+                <div class="social-links">
+                    <!-- Placeholders for GitHub and LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+                <div class="action-btn-container">
+                    <a href="mailto:sreharisree06@gmail.com" class="btn btn-primary">Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>Designed & Built by Sreehari K U</p>
+            <p class="copyright">&copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

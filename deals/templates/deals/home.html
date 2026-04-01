@@ -1,0 +1,41 @@
+{% extends 'deals/base.html' %}
+
+{% block content %}
+<section class="hero-search container">
+    <div class="hero-inner">
+        <h1>Smart Deal Finder</h1>
+        <p>Find the lowest prices across multiple platforms instantly.</p>
+        
+        <form class="big-search-form" action="{% url 'deals:search_results' %}" method="get">
+            <input type="text" name="q" placeholder="What are you looking for?" required>
+            <button type="submit" class="btn btn-cta">Search Deals</button>
+        </form>
+        
+        <div class="popular-searches">
+            <span>Trending:</span>
+            <a href="{% url 'deals:search_results' %}?q=laptop">Laptops</a>,
+            <a href="{% url 'deals:search_results' %}?q=apple">Apple</a>,
+            <a href="{% url 'deals:search_results' %}?q=headphones">Headphones</a>,
+            <a href="{% url 'deals:search_results' %}?q=gaming">Gaming</a>
+        </div>
+    </div>
+</section>
+
+<section class="features container">
+    <h2>Why use Deal Tag?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Real-Time Comparisons</h3>
+            <p>We aggregate across Amazon, BestBuy, Walmart and more so you don't have to check multiple tabs.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Best Deal Highlighted</h3>
+            <p>Our algorithm instantly highlights the absolute best available price at a glance.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Trusted Retailers</h3>
+            <p>Only verified and in-stock items are highlighted, ensuring you get actual deals.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
